@@ -5,7 +5,7 @@
 var mainArray = [];
 
 
-padding=5;
+textPaddingVertical=5;
 
 
 mainArray[0] = {array: [], name: "Administrasjon", person:"Helene Busengdal", color:"#C9BFD6"};
@@ -133,7 +133,7 @@ for (i = 0; i < mainArray.length; i++) {
              ctx.font = "16px Arial";
              ctx.fillStyle = '#EEEEEE';
              var textToWrite = mainArray[i].array[j].array[k].name;
-             wrapText(ctx, textToWrite, centerx+Math.cos(startAnglelvl3-startAnglelvl3)*radius2+padding, centery+Math.sin(startAnglelvl3-startAnglelvl3)*radius2-padding, radius3-radius2, 24);
+             wrapText(ctx, textToWrite, centerx+Math.cos(startAnglelvl3-startAnglelvl3)*radius2+textPaddingVertical, centery+Math.sin(startAnglelvl3-startAnglelvl3)*radius2-textPaddingVertical, radius3-radius2, 24);
              //ctx.fillText(textToWrite,centerx+Math.cos(startAnglelvl1-startAnglelvl1)*radius0,centery+Math.sin(startAnglelvl1-startAnglelvl1)*radius0);
              ctx.restore();
 
@@ -162,7 +162,7 @@ for (i = 0; i < mainArray.length; i++) {
         ctx.font = "16px Arial";
         ctx.fillStyle = '#EEEEEE';
         var textToWrite = mainArray[i].array[j].name;
-        wrapText(ctx, textToWrite, centerx + Math.cos(startAnglelvl2 - startAnglelvl2) * radius1 + padding, centery + Math.sin(startAnglelvl2 - startAnglelvl2) * radius1 - padding, radius2 - radius1, 24);
+        wrapText(ctx, textToWrite, centerx + Math.cos(startAnglelvl2 - startAnglelvl2) * radius1 + textPaddingVertical, centery + Math.sin(startAnglelvl2 - startAnglelvl2) * radius1 - textPaddingVertical, radius2 - radius1, 24);
         //ctx.fillText(textToWrite,centerx+Math.cos(startAnglelvl1-startAnglelvl1)*radius0,centery+Math.sin(startAnglelvl1-startAnglelvl1)*radius0);
         ctx.restore();
 
@@ -190,7 +190,7 @@ for (i = 0; i < mainArray.length; i++) {
     ctx.font = "16px Arial";
     ctx.fillStyle = '#EEEEEE';
     var textToWrite = mainArray[i].name;
-    wrapText(ctx, textToWrite, centerx + Math.cos(startAnglelvl1 - startAnglelvl1) * radius0 + padding, centery + Math.sin(startAnglelvl1 - startAnglelvl1) * radius0 - padding, radius1 - radius0, 24);
+    wrapText(ctx, textToWrite, centerx + Math.cos(startAnglelvl1 - startAnglelvl1) * radius0 + textPaddingVertical, centery + Math.sin(startAnglelvl1 - startAnglelvl1) * radius0 - textPaddingVertical, radius1 - radius0, 24);
     //ctx.fillText(textToWrite,centerx+Math.cos(startAnglelvl1-startAnglelvl1)*radius0,centery+Math.sin(startAnglelvl1-startAnglelvl1)*radius0);
     ctx.restore();
 
@@ -283,7 +283,7 @@ function drawSection(level, textOffset, textToWrite,flip,index,arrayLength) {
         ctx.font = "16px Arial";
         ctx.fillStyle = '#000000';
         ctx.textAlign = "end";
-        wrapText(ctx, textToWrite, centerx - (Math.cos(0) * radiuses[level - 1]) + padding-7, centery - (Math.sin(0) * radiuses[level - 1]*1.1) - padding-2, radiuses[level] - radiuses[level - 1], 24);
+        wrapText(ctx, textToWrite, centerx - (Math.cos(0) * radiuses[level - 1]) + textPaddingVertical-7, centery - (Math.sin(0) * radiuses[level - 1]*1.1) - textPaddingVertical-2, radiuses[level] - radiuses[level - 1], 24);
         //ctx.fillText(textToWrite,centerx+Math.cos(startAnglelvl1-startAnglelvl1)*radius0,centery+Math.sin(startAnglelvl1-startAnglelvl1)*radius0);
         ctx.restore();
     }else{
@@ -293,7 +293,7 @@ function drawSection(level, textOffset, textToWrite,flip,index,arrayLength) {
         ctx.translate(-centerx, -centery);
         ctx.font = "16px Arial";
         ctx.fillStyle = '#EEEEEE';
-        wrapText(ctx, textToWrite, centerx + Math.cos(0) * radiuses[level - 1] + padding, centery + Math.sin(0) * radiuses[level - 1] - padding, radiuses[level] - radiuses[level - 1], 24);
+        wrapText(ctx, textToWrite, centerx + Math.cos(0) * radiuses[level - 1] + textPaddingVertical, centery + Math.sin(0) * radiuses[level - 1] - textPaddingVertical, radiuses[level] - radiuses[level - 1], 24);
         //ctx.fillText(textToWrite,centerx+Math.cos(startAnglelvl1-startAnglelvl1)*radius0,centery+Math.sin(startAnglelvl1-startAnglelvl1)*radius0);
         ctx.restore();
 
